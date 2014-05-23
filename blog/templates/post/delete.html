@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Post CRUD
+{% endblock %}
+
+{% block app %}
+    Post CRUD Delete
+{% endblock %}
+
+{% block menu %}
+    {% include 'post/menu.html' %}
+{%  endblock %}
+
+{% block content %}
+
+
+    <form action="" method="post">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <input type="submit" value="Delete">
+    </form>
+
+{% endblock %}

@@ -1,4 +1,4 @@
-{% extends '../base.html' %}
+{% extends 'base.html' %}
 
 {% block title %}
     Post CRUD
@@ -9,16 +9,32 @@
 {% endblock %}
 
 {% block menu %}
-    {% include 'menu.html' %}
+    {% include 'post/menu.html' %}
 {%  endblock %}
 
 {% block content %}
 
     <ul>
         {% for post in post_list %}
-            <li> {{ post.title }}</li>
+            <li>
+                <a href='{% url "post:detail" post.pk %}'>
+                {{ post.title }}
+                <a>
+            </li>
         {% endfor %}
     </ul>
+    <br/>
+
+    {% if is_paginated %}
+        {% if page_obj.has_previous %}
+            <a href="{% url 'post:listing' %}?page={{ page_obj.previous_page_number }}">anterior</a>
+        {% endif %}
+        Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}
+
+        {% if page_obj.has_next %}
+            <a href="{% url 'post:listing' %}?page={{ page_obj.next_page_number }}">siguiente</a>
+        {% endif %}
+    {% endif %}
 
 {% endblock %}
 
