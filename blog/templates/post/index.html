@@ -1,0 +1,25 @@
+{% extends '../base.html' %}
+
+{% block title %}
+    Post CRUD
+{% endblock %}
+
+{% block app %}
+    Post CRUD example
+{% endblock %}
+
+{% block menu %}
+    {% include 'menu.html' %}
+{%  endblock %}
+
+{% block content %}
+
+    <ul>
+        {% for post in post_list %}
+            <li> {{ post.title }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
+
