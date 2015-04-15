@@ -15,6 +15,7 @@ class PostListing(ListView):
 
 class PostCreate(CreateView):
     model = Post
+    fields = ['title', 'body']
     template_name = 'post/new.html'
     success_url = reverse_lazy('post:listing')
 
@@ -26,6 +27,7 @@ class PostDetail(DetailView):
 
 class PostUpdate(UpdateView):
     model = Post
+    fields = ['title', 'body']
     template_name = 'post/edit.html'
 
     def get_success_url(self):
