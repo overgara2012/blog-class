@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Post CRUD
+{% endblock %}
+
+{% block app %}
+    Post CRUD Detail
+{% endblock %}
+
+{% block menu %}
+    {% include 'menu.html' %}
+{%  endblock %}
+
+{% block content %}
+
+    <h1> {{ post.title }} </h1>
+    <p> {{ post.body }} </p>
+
+    <a href="{% url "post:update" post.pk %}">Edit</a>
+    <a href="{% url "post:delete" post.pk %}">Delete</a>
+{% endblock %}
+
