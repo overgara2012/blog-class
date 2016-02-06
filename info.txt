@@ -1,0 +1,8 @@
+
++ Base on http://slides.com/camilonova/getting-started-with-django/#/10
++ Getting started https://www.djangoproject.com/start/
++ Tutorial https://docs.djangoproject.com/en/1.9/intro/tutorial01/
++ https://ccbv.co.uk/
++ https://docs.djangoproject.com/en/1.9/releases/1.9/
++ https://docs.djangoproject.com/en/1.9/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names
++ https://www.youtube.com/watch?v=fICgJXMIvYA
